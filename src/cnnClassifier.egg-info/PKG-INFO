@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: cnnClassifier
+Version: 0.0.0
+Summary: A small python package for CNN app
+Home-page: https://github.com/entbappy/Chest-Cancer-Classification-Project
+Author: entbappy
+Author-email: entbappy73@gmail.com
+Project-URL: Bug Tracker, https://github.com/entbappy/Chest-Cancer-Classification-Project/issues
+
+# End-to-End Chest Cancer Classification
+
+This project is a deep learning application for classifying chest cancer from CT scan images, built with a robust MLOps pipeline using MLflow and DVC.
+
+## Project Intialization Progress
+
+We have successfully set up the foundational skeleton of the project. The following steps have been completed:
+
+1.  **Project Structure Generation**:
+    - Created `template.py` to automatically generate the standard directory structure (src, config, components, pipelines).
+    - Executed the script to populate the project folders.
+
+2.  **Environment Configuration**:
+    - Created `requirements.txt` with necessary dependencies (tensorflow, mlflow, dvc, flask, etc.).
+    - Created `setup.py` to install the project as a local python package (`cnnClassifier`).
+    - Handled encoding issues for Windows environments.
+
+3.  **Core Utilities**:
+    - Configured Logging (`src/cnnClassifier/__init__.py`) for standardized application logs.
+    - implemented Common Utilities (`src/cnnClassifier/utils/common.py`) for YAML reading, directory creation, and file handling.
+
+## Project Structure
+
+The current directory structure is organized as follows:
+
+```text
+Chest-Cancer-Classification-Test/
+├── .github/workflows/   # CI/CD workflows
+├── config/             
+│   └── config.yaml      # Configuration for pipelines
+├── src/
+│   └── cnnClassifier/
+│       ├── __init__.py  # Logging setup
+│       ├── components/  # Logic for individual pipeline stages
+│       ├── config/      # Configuration managers
+│       ├── constants/   # Constant values
+│       ├── entity/      # Data classes for configuration
+│       ├── pipeline/    # Orchestration of components
+│       └── utils/       # Utility functions
+├── templates/           # HTML templates for Flask
+├── .gitignore
+├── dvc.yaml             # DVC pipeline definition
+├── params.yaml          # Hyperparameters
+├── requirements.txt     # Python dependencies
+├── setup.py             # Package setup script
+└── template.py          # Structure generator script
+```
+
+## Next Steps
+
+- Implement Stage 01: Data Ingestion
+- Configure `config.yaml` for data paths
+- Create Data Ingestion component and pipeline
