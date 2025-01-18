@@ -51,7 +51,9 @@
             font-weight: 700;
             margin-bottom: 10px;
             background: -webkit-linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -260,6 +262,7 @@
                         <div class="mb-4">
                             <span class="confidence-label">Diagnosis Result</span>
                             <h2 id="prediction-label" class="prediction-text">Normal</h2>
+                            <p id="confidence-display" class="text-muted font-monospace">Confidence: <span>0.00%</span></p>
                         </div>
                         
                         <div class="alert alert-light border" role="alert">
@@ -379,13 +382,21 @@
 
                         try {
                             var prediction = res[0].image;
+                            var confidence = res[0].confidence;
                             var label = $("#prediction-label");
+                            var confidenceDisplay = $("#confidence-display span");
                             
                             label.text(prediction);
                             if(prediction.toLowerCase().includes("cancer") || prediction.toLowerCase().includes("adenocarcinoma")) {
                                 label.removeClass("normal-text").addClass("cancer-text");
                             } else {
                                 label.removeClass("cancer-text").addClass("normal-text");
+                            }
+                            
+                            if (confidence !== undefined) {
+                                confidenceDisplay.text((confidence * 100).toFixed(2) + "%");
+                            } else {
+                                confidenceDisplay.text("N/A");
                             }
 
                         } catch(e) {

@@ -27,8 +27,8 @@ class PredictionPipeline:
         if predicted_class_index == 1:
             prediction = 'Normal'
             logger.info("Prediction is Normal")
-            return [{"image" : prediction}]
+            return [{"image" : prediction, "confidence": float(confidence_score)}]
         else:
             prediction = 'Adenocarcinoma Cancer'
             logger.info("Prediction is Adenocarcinoma Cancer")
-            return [{"image" : prediction}]
+            return [{"image" : prediction, "confidence": float(confidence_score)}]
