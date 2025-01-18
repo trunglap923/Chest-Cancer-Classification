@@ -13,10 +13,10 @@ except UnicodeDecodeError:
 
 __version__ = "0.0.0"
 
-REPO_NAME = "Chest-Cancer-Classification-Project"
-AUTHOR_USER_NAME = "entbappy"
+REPO_NAME = "Chest-Cancer-Classification"
+AUTHOR_USER_NAME = "trunglap923"
 SRC_REPO = "cnnClassifier"
-AUTHOR_EMAIL = "entbappy73@gmail.com"
+AUTHOR_EMAIL = "trunglap923@gmail.com"
 
 
 setuptools.setup(

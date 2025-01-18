@@ -81,7 +81,7 @@ class ConfigurationManager:
         eval_config = EvaluationConfig(
             path_of_model=Path(training.trained_model_path),
             training_data=Path(training_data),
-            mlflow_uri="https://dagshub.com/entbappy/chest-Disease-Classification-MLflow-DVC.mlflow",
+            mlflow_uri="https://dagshub.com/trunglap923/Chest-Cancer-Classification.mlflow",
             all_params=self.params,
             params_image_size=self.params.IMAGE_SIZE,
             params_batch_size=self.params.BATCH_SIZE
