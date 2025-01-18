@@ -10,3 +10,8 @@ __pycache__/
 artifacts/*
 logs
 mlruns
+
+# Test files
+inputImage.jpg
+batch_prediction.py
+single_prediction.py
