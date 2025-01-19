@@ -23,5 +23,5 @@ artifacts/model_evaluation
 # Other
 Dockerfile
 .dockerignore
-README.md
+
 logs
