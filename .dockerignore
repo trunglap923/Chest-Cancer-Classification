@@ -1,0 +1,27 @@
+# Git
+.git
+.github
+.gitignore
+
+# Python
+.venv
+venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+
+# Project Artifacts (Optimize build size)
+# Only keep artifacts/training/model.h5 which is needed for prediction
+artifacts/data_ingestion
+artifacts/prepare_base_model
+artifacts/model_evaluation
+
+# Config - assuming config is needed, but large temp files inside aren't
+# (Current config seems small)
+
+# Other
+Dockerfile
+.dockerignore
+README.md
+logs
